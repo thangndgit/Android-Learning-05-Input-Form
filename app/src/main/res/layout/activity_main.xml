@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="NHẬP THÔNG TIN CÁ NHÂN"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameWrapper"
+                    style="@style/textInputLayoutStyle"
+                    app:counterMaxLength="30">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:hint="Họ và tên"
+                        android:inputType="textCapWords"
+                        android:maxLength="30" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mssvWrapper"
+                    style="@style/textInputLayoutStyle"
+                    app:counterMaxLength="8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mssv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:hint="Mã số sinh viên"
+                        android:inputType="numberSigned"
+                        android:maxLength="8" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cccdWrapper"
+                    style="@style/textInputLayoutStyle"
+                    app:counterMaxLength="12">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cccd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:hint="Số CMND/CCCD"
+                        android:inputType="numberSigned"
+                        android:maxLength="12" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneWrapper"
+                    style="@style/textInputLayoutStyle"
+                    app:counterMaxLength="10">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:hint="Số điện thoại"
+                        android:inputType="numberSigned"
+                        android:maxLength="10" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/birthWrapper"
+                    style="@style/textInputLayoutStyle"
+                    app:counterEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ngày sinh"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="date" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/button_pick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="0"
+                    android:insetBottom="0dp"
+                    android:text="Chọn ngày" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailWrapper"
+                style="@style/textInputLayoutStyle"
+                app:counterMaxLength="50">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Địa chỉ Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/homeTownWrapper"
+                style="@style/textInputLayoutStyle"
+                app:counterMaxLength="100">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/homeTown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Quê quán"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressWrapper"
+                style="@style/textInputLayoutStyle"
+                app:counterMaxLength="100">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Địa chỉ hiện tại"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView_major"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngành học hiện tại" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton_khtm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Khoa học máy tính (IT1)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_ktmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Kỹ thuật máy tính (IT2)" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView_pLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ngôn ngữ lập trình" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_cpp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C++" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_csharp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C#" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Java" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_js"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="JavaScript" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_python"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Python" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Điều khoản và điều kiện" />
+
+            <CheckBox
+                android:id="@+id/checkBox_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tôi đồng ý tuân thủ các điều khoản và điều kiện" />
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:enabled="false"
+                android:text="Lưu thông tin" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
